@@ -15,6 +15,7 @@
 		E510C1D3287E664E00827979 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E510C1D1287E664E00827979 /* LaunchScreen.storyboard */; };
 		E510C35B2884F30600827979 /* XvMuse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E510C35A2884F30600827979 /* XvMuse.framework */; };
 		E510C35C2884F30600827979 /* XvMuse.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E510C35A2884F30600827979 /* XvMuse.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF50065CFD0466B7DFD2EB82 /* Pods_BluetoothMuse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC27785C715DF379553ACB7 /* Pods_BluetoothMuse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1985337AC1AAF5B3412AFA56 /* Pods-BluetoothMuse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothMuse.release.xcconfig"; path = "Target Support Files/Pods-BluetoothMuse/Pods-BluetoothMuse.release.xcconfig"; sourceTree = "<group>"; };
+		5AC27785C715DF379553ACB7 /* Pods_BluetoothMuse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BluetoothMuse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8672DB9A696E99011EE8C946 /* Pods-BluetoothMuse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothMuse.debug.xcconfig"; path = "Target Support Files/Pods-BluetoothMuse/Pods-BluetoothMuse.debug.xcconfig"; sourceTree = "<group>"; };
 		E510C1C3287E664C00827979 /* BluetoothMuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothMuse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E510C1C6287E664C00827979 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E510C1C8287E664C00827979 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,18 +65,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				E510C35B2884F30600827979 /* XvMuse.framework in Frameworks */,
+				FF50065CFD0466B7DFD2EB82 /* Pods_BluetoothMuse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BB4F88675BAF60A36F8C988 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8672DB9A696E99011EE8C946 /* Pods-BluetoothMuse.debug.xcconfig */,
+				1985337AC1AAF5B3412AFA56 /* Pods-BluetoothMuse.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E510C1BA287E664C00827979 = {
 			isa = PBXGroup;
 			children = (
 				E510C1C5287E664C00827979 /* BluetoothMuse */,
 				E510C1C4287E664C00827979 /* Products */,
 				E510C1E9287E67C300827979 /* Frameworks */,
+				0BB4F88675BAF60A36F8C988 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				E510C3542884F2E200827979 /* XvMuse.xcodeproj */,
+				5AC27785C715DF379553ACB7 /* Pods_BluetoothMuse.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,10 +140,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E510C1D7287E664E00827979 /* Build configuration list for PBXNativeTarget "BluetoothMuse" */;
 			buildPhases = (
+				B7EE0D7C51E35EC6804753CD /* [CP] Check Pods Manifest.lock */,
 				E510C1BF287E664C00827979 /* Sources */,
 				E510C1C0287E664C00827979 /* Frameworks */,
 				E510C1C1287E664C00827979 /* Resources */,
 				E510C1ED287E67C300827979 /* Embed Frameworks */,
+				CBFD1EA4AB41B2B9552C7C17 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,6 +217,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B7EE0D7C51E35EC6804753CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BluetoothMuse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBFD1EA4AB41B2B9552C7C17 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BluetoothMuse/Pods-BluetoothMuse-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BluetoothMuse/Pods-BluetoothMuse-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BluetoothMuse/Pods-BluetoothMuse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E510C1BF287E664C00827979 /* Sources */ = {
@@ -355,6 +416,7 @@
 		};
 		E510C1D8287E664E00827979 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8672DB9A696E99011EE8C946 /* Pods-BluetoothMuse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -386,6 +448,7 @@
 		};
 		E510C1D9287E664E00827979 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1985337AC1AAF5B3412AFA56 /* Pods-BluetoothMuse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
